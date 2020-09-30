@@ -12,6 +12,7 @@ struct GraphView: View {
     
     var vm: CovidInfectionsViewModel
     var multiplier: CGFloat
+    var fontSize: CGFloat = 12
     
     var body: some View {
         
@@ -26,7 +27,7 @@ struct GraphView: View {
                             BarView(color: Color(.label), measure: self.vm.countries[item].deaths, max: self.vm.total.confirmed, multiplier: self.multiplier)
                         }
                         Text(self.vm.countries[item].alphaThreeCode ?? "ZZZ").padding(.top, 8)
-                            .font(.footnote)
+                            .font(.system(size: self.fontSize))
                     }
                 }
             }
