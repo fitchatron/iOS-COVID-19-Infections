@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CovidInfectionsView: View {
     
-    @ObservedObject var vm = CovidInfectionsViewModel()
+    @StateObject private var vm = CovidInfectionsViewModel()
     
     @State var selection = 0
     //var selections = ["Graph", "Table", "Australia"]
